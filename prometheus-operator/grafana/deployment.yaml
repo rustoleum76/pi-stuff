@@ -43,6 +43,10 @@ spec:
 #            name: dashboards-k8s-addons-starboard-operator
 #            readOnly: true
 #            subPath: k8s-addons-starboard-operator.json
+          - mountPath: /etc/grafana/provisioning/default.yaml
+            name: grafana-dashboards-provider
+            readOnly: false
+            subPath: default.yaml
           - mountPath: /etc/grafana/provisioning/dashboards/k8s-system-api-server.json
             name: dashboards-k8s-system-api-server
             readOnly: false
