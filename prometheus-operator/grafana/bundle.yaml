@@ -33,6 +33,19 @@ spec:
           requests:
             cpu: 100m
             memory: 100Mi
+          volumeMounts:
+          - mountPath: /var/lib/grafana
+            name: grafana-storage
+          - mountPath: /etc/grafana/provisioning/datasources
+            name: grafana-datasources
+            readOnly: false
+      volumes:
+        - name: grafana-storage
+          emptyDir: {}
+        - name: grafana-datasources
+          configMap:
+              defaultMode: 420
+              name: grafana-datasources
 #        volumeMounts:
 #        - mountPath: /var/lib/grafana
 #          name: grafana-storage
@@ -44,6 +57,13 @@ spec:
         runAsNonRoot: true
         runAsUser: 65534
       serviceAccountName: grafana
+      volumes:
+        - name: grafana-storage
+          emptyDir: {}
+        - name: grafana-datasources
+          configMap:
+              defaultMode: 420
+              name: grafana-datasources
 #      volumes:
 #        - name: grafana-storage
 #          persistentVolumeClaim:
