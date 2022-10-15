@@ -39,13 +39,9 @@ spec:
           - mountPath: /etc/grafana/provisioning/datasources
             name: grafana-datasources
             readOnly: false
-      volumes:
-        - name: grafana-storage
-          emptyDir: {}
-        - name: grafana-datasources
-          configMap:
-              defaultMode: 420
-              name: grafana-datasources
+          - mountPath: /etc/grafana/provisioning/dashboards
+            name: dashboards-k8s-addons-starboard-operator
+            readOnly: true
 #        volumeMounts:
 #        - mountPath: /var/lib/grafana
 #          name: grafana-storage
@@ -64,6 +60,10 @@ spec:
           configMap:
               defaultMode: 420
               name: grafana-datasources
+        - name: dashboards-k8s-addons-starboard-operator
+          configMap:
+              defaultMode: 420
+              name: dashboards-k8s-addons-starboard-operator
 #      volumes:
 #        - name: grafana-storage
 #          persistentVolumeClaim:
