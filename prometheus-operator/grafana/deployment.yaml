@@ -51,6 +51,26 @@ spec:
             name: dashboards-k8s-system-api-server
             readOnly: false
             subPath: k8s-system-api-server.json
+          - mountPath: /etc/grafana/provisioning/dashboards/dashboards-k8s-system-coredns.json
+            name: dashboards-k8s-system-coredns
+            readOnly: false
+            subPath: dashboards-k8s-system-coredns.json
+          - mountPath: /etc/grafana/provisioning/dashboards/dashboards-k8s-views-global.json
+            name: dashboards-k8s-views-global
+            readOnly: false
+            subPath: dashboards-k8s-views-global.json
+          - mountPath: /etc/grafana/provisioning/dashboards/dashboards-k8s-views-namespaces.json
+            name: dashboards-k8s-views-namespaces
+            readOnly: false
+            subPath: dashboards-k8s-views-namespaces.json
+          - mountPath: /etc/grafana/provisioning/dashboards/dashboards-k8s-views-nodes.json
+            name: dashboards-k8s-views-nodes
+            readOnly: false
+            subPath: dashboards-k8s-views-nodes.json
+          - mountPath: /etc/grafana/provisioning/dashboards/dashboards-k8s-views-pods.json
+            name: dashboards-k8s-views-pods
+            readOnly: false
+            subPath: dashboards-k8s-views-pods.json
 #        volumeMounts:
 #        - mountPath: /var/lib/grafana
 #          name: grafana-storage
