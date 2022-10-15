@@ -39,11 +39,11 @@ spec:
           - mountPath: /etc/grafana/provisioning/datasources
             name: grafana-datasources
             readOnly: false
-          - mountPath: /etc/grafana/provisioning/dashboards/k8s-addons-starboard-operator.yaml
+          - mountPath: /etc/grafana/provisioning/dashboards
             name: dashboards-k8s-addons-starboard-operator
             readOnly: true
             subPath: k8s-addons-starboard-operator.yaml
-          - mountPath: /etc/grafana/provisioning/dashboards/k8s-system-api-server.yaml
+          - mountPath: /etc/grafana/provisioning/dashboards
             name: dashboards-k8s-system-api-server
             readOnly: false
             subPath: k8s-system-api-server.yaml
