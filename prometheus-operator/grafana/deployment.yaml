@@ -73,6 +73,10 @@ spec:
 #          configMap:
 #              defaultMode: 420
 #              name: dashboards-k8s-addons-starboard-operator
+        - name: grafana-dashboards-provider
+          configMap:
+              defaultMode: 420
+              name: grafana-dashboards-provider
         - name: dashboards-k8s-system-api-server
           configMap:
               defaultMode: 420
