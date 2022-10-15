@@ -81,6 +81,26 @@ spec:
           configMap:
               defaultMode: 420
               name: dashboards-k8s-system-api-server
+        - name: dashboards-k8s-system-coredns
+          configMap:
+              defaultMode: 420
+              name: dashboards-k8s-system-coredns
+        - name: dashboards-k8s-views-global
+          configMap:
+              defaultMode: 420
+              name: dashboards-k8s-views-global
+        - name: dashboards-k8s-views-namespaces
+          configMap:
+              defaultMode: 420
+              name: dashboards-k8s-views-namespaces
+        - name: dashboards-k8s-views-nodes
+          configMap:
+              defaultMode: 420
+              name: dashboards-k8s-views-nodes
+        - name: dashboards-k8s-views-pods
+          configMap:
+              defaultMode: 420
+              name: dashboards-k8s-views-pods
 #      volumes:
 #        - name: grafana-storage
 #          persistentVolumeClaim:
