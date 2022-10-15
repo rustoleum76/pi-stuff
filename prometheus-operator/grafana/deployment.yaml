@@ -16,9 +16,7 @@ spec:
         app: grafana
     spec:
       containers:
-        env: 
-        - name: ADMIN_PASSWORD
-          value: prom-operator
+      - env: []
         image: grafana/grafana:latest
         name: grafana
         ports:
