@@ -1,0 +1,14 @@
+helm repo add grafana https://grafana.github.io/helm-charts
+
+ helm install loki grafana/loki-stack -n loki --create-namespace -f ./loki-stack-values.yml
+
+
+At time of deploy:
+
+NAME            NAMESPACE       REVISION        UPDATED                                 STATUS          CHART                   APP VERSION
+loki            loki            1               2022-10-27 15:00:08.618792855 -0400 EDT deployed        loki-stack-2.8.3        v2.6.1
+
+
+
+
+
