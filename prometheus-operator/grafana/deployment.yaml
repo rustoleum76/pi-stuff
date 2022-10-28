@@ -71,6 +71,10 @@ spec:
             name: dashboards-k8s-views-pods
             readOnly: false
             subPath: k8s-views-pods.json
+          - mountPath: /etc/grafana/provisioning/dashboards/loki-dash.json
+            name: grafana-loki-dashboard
+            readOnly: false
+            subPath: loki-dash.json
 #        volumeMounts:
 #        - mountPath: /var/lib/grafana
 #          name: grafana-storage
@@ -121,6 +125,9 @@ spec:
           configMap:
               defaultMode: 420
               name: dashboards-k8s-views-pods
+        - name: grafana-loki-dash
+          configMap:
+              name: grafana-loki-dash
 #      volumes:
 #        - name: grafana-storage
 #          persistentVolumeClaim:
