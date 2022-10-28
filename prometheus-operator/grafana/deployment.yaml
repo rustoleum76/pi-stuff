@@ -72,7 +72,7 @@ spec:
             readOnly: false
             subPath: k8s-views-pods.json
           - mountPath: /etc/grafana/provisioning/dashboards/loki-dash.json
-            name: grafana-loki-dashboard
+            name: grafana-loki-dash
             readOnly: false
             subPath: loki-dash.json
 #        volumeMounts:
