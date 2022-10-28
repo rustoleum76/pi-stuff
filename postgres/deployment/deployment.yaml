@@ -24,5 +24,8 @@ spec:
         env:
         - name: POSTGRES_PASSWORD
           value: p0stgre5
+        - name: POSTGRES_USER
+          value: admin
+
 
 
