@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: playwright-deployment
+  labels:
+    app: playwright
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: playwright
+  template:
+    metadata:
+      labels:
+        app: playwright
+    spec:
+      containers:
+      - name: playwright
+        image: rustoleum76/playwright:latest
+        ports:
+        - containerPort: 80
+
+
